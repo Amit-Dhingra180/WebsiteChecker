@@ -18,15 +18,18 @@ function App() {
   };
 
   return (
+    <div>
+    <h1 className='text-4xl font-semibold text-center my-2'>Website Checker</h1>
+
     <div className='flex justify-between m-6'>
-      
+
       <div>
         <input
           type="text"
           placeholder="Enter URL"
           value={urlInput}
           onChange={(e) => setUrlInput(e.target.value)}
-        className='w-96 h-9 p-2 bg-gray-200'/>
+        className=' w-80 h-9 p-2 bg-gray-200'/>
         <button onClick={handleCheckButtonClick} className='ml-4 bg-black text-white p-1'>Check</button>
       </div>
 
@@ -35,6 +38,8 @@ function App() {
         status === 200 ? <div className='w-8 h-8 bg-green-500'></div> :
         <div className='w-8 h-8 bg-red-500'></div>}
       </div>
+
+    </div>
 
     </div>
   );
